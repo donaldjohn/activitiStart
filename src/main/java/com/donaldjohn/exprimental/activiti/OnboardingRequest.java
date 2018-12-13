@@ -23,10 +23,10 @@ public class OnboardingRequest
     public static void main(String[] args) throws ParseException
     {
         ProcessEngineConfiguration cfg = new StandaloneProcessEngineConfiguration()
-                .setJdbcUrl("jdbc:h2:mem:activiti;DB_CLOSE_DELAY=1000")
-                .setJdbcUsername("sa")
-                .setJdbcPassword("")
-                .setJdbcDriver("org.h2.Driver")
+                .setJdbcUrl("jdbc:mysql://localhost:3306/activiti")
+                .setJdbcUsername("root")
+                .setJdbcPassword("123456")
+                .setJdbcDriver("com.mysql.jdbc.Driver")
                 .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
 
         ProcessEngine processEngine = cfg.buildProcessEngine();
